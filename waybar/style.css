@@ -1,0 +1,56 @@
+@import "colours.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Iosevka Nerd Font Mono";
+    font-size: 18px;
+    min-height: 0;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+
+window#waybar {
+    background: @background;
+    border-top: 1px solid @surface_dim;
+    color: @on_surface;
+}
+
+#workspaces {
+    color: transparent;
+    margin-right: 1.5px;
+    margin-left: 1.5px;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+#workspaces button {
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 3px;
+    color: @on_surface;
+}
+
+#workspaces button.active {
+    color: @primary;
+    border-bottom: 3px solid @primary_container;
+}
+
+#workspaces button.focused {
+    color: @secondary;
+}
+
+#workspaces button.urgent {
+    color: @on_error;
+    border-bottom: 3px @on_error_container;
+}
+
+#workspaces button:hover {
+    background: @tertiary_container;
+    color: @tertiary;
+}
+
+#clock {
+    padding-right: 1rem;
+}
+

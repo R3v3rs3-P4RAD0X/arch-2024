@@ -1,0 +1,99 @@
+@import "~/.config/rofi/colours.rasi"
+
+
+* {
+    background-color: @surface;
+}
+
+element {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    spacing: 5px;
+    border: 2;
+    border-color: @secondary;
+}
+
+element normal.normal {
+    background-color: @primary-container;
+    text-color:       @on-primary-container;
+}
+
+element selected.normal {
+    background-color: @on-tertiary;
+    text-color:       @on-tertiary-fixed;
+}
+
+element alternate.normal {
+    background-color: @primary-container;
+    text-color:       @on-primary-container;
+}
+
+element-text {
+    background-color: transparent;
+    cursor:           pointer;
+    highlight:        inherit;
+    text-color:       inherit;
+    font-weight:      bold;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             1.0000em;
+    cursor:           inherit;
+    text-color:       inherit;
+}
+
+window {
+    padding: 5;
+    background: @surface;
+    border: 8px;
+    border-radius: 15px;
+    padding: 8px;
+}
+
+message {
+    padding:      1px ;
+    border-color: @outline;
+    border:       2px dash 0px 0px ;
+}
+
+listview {
+    dynamic: false;
+    flow: horizontal;
+    columns: 1;
+    padding: 16px;
+}
+
+entry {
+    padding:          2.0000mm;
+    margin:           16px;
+    background-color: @secondary-container;
+    vertical-align:   0.50;
+    text-color:       @on-secondary-container;
+}
+
+prompt {
+    width:            15.0000mm ;
+    padding:          2.0000mm ;
+    vertical-align:   0.50;
+    border-radius:    5.0000mm 0.0000mm 0.0000mm 5.0000mm ;
+    text-color:       @on-secondary-container;
+}
+
+inputbar {
+    background-color: transparent;
+    spacing:          1.0000mm ;
+    text-color:       @on-secondary-container;
+    children:         [ "prompt","entry","textbox-end" ];
+}
+
+textbox-end {
+    width:            15.0000mm ;
+    padding:          2.0000mm ;
+    expand:           false;
+    vertical-align:   0.50;
+    border-radius:    0.0000mm 5.0000mm 5.0000mm 0.0000mm ;
+    text-color:       inherit;
+}

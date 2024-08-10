@@ -1,0 +1,93 @@
+@import "~/.config/rofi/colours.rasi"
+
+* {
+	background-color: transparent;
+	text-color:       white;
+}
+
+window {
+	fullscreen:       true;
+	background-color: black/75%;
+	padding:          4em;
+	children:         [ wrap, listview-split];
+	spacing:          1em;
+}
+
+
+/** We add an extra child to this is PREVIEW=true */
+listview-split {
+  orientation: horizontal;
+  spacing: 0.5em;
+  children: [listview];
+}
+
+wrap {
+	expand: false;
+	orientation: vertical;
+	children: [ inputbar, message ];
+	background-color: @surface;
+	border-color: @on-primary;
+	border: 3px;
+	border-radius: 0.4em;
+}
+
+icon-ib {
+	expand: false;
+	filename: "system-search";
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	size: 1em;
+}
+inputbar {
+	spacing: 0.4em;
+	padding: 0.4em;
+	children: [ icon-ib, entry ];
+}
+entry {
+	placeholder: "Search";
+	placeholder-color: @outline;
+}
+message {
+	background-color: @primary;
+	border-color: @primary-fixed;
+	border: 3px 0px 0px 0px;
+	padding: 0.4em;
+	spacing: 0.4em;
+}
+
+listview {
+	flow: horizontal;
+	fixed-columns: true;
+	columns: 3;
+	spacing: 1.0em;
+}
+
+element {
+	orientation: vertical;
+	padding: 0.1em;
+	background-color: @primary-container;
+	border-color: @secondary;
+	border: 3px;
+	border-radius: 0.4em;
+
+  children: [element-icon, element-text ];
+}
+
+element-icon {
+	size: calc(((100% - 8em) / 7 ));
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+}
+
+element-text {
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+ 	padding: 0.2em;
+}
+
+element selected {
+	background-color: @on-primary;
+	border-color: @tertiary;
+	border: 3px;
+	border-radius: 15px;
+}

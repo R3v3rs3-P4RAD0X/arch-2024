@@ -1,0 +1,16 @@
+*.env
+*.xml
+*.locale
+
+# Exclude the following directories
+discord/*
+CurseForge/*
+Code/*
+Electron/*
+obs-studio/*
+spotify/*
+unity3d/*
+vscode/*
+WebCord/*
+BraveSoftware/*
+cef_user_data/*

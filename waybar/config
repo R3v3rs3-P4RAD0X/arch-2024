@@ -1,0 +1,12 @@
+{
+    "include": "/home/p4rad0x/.config/waybar/modules",
+    "layer": "bottom",
+    "position": "top",
+    "height": 48,
+    "spacing": 5,
+    "exclusive": true,
+    "passthrough": false,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["tray", "custom/sep", "pulseaudio", "custom/sep", "custom/spotify", "custom/sep", "custom/notification", "custom/sep", "clock"]
+}
