@@ -14,3 +14,9 @@ vscode/*
 WebCord/*
 BraveSoftware/*
 cef_user_data/*
+systemd/*
+neofetch/*
+htop/*
+gtk/*
+evolution/*
+dconf/*
